@@ -61,6 +61,7 @@
                 success: function (response) {
                     $('#body-container').empty()
                     for (let i = 0; i < response.length; i++) {
+                        print(response.length)
                         let post = response[i]
                         let tempHtml = addPostItem(post)
                         $('#body-container').append(tempHtml)
@@ -73,7 +74,7 @@
             return `<tr onclick=openPost(${post.id})>
                 <td class="text-center">${post.title}</td>
                 <td class="text-center">${post.username}</td>
-                <td class="text-center">${post.lastModified}</td>
+                <td class="text-center">${post.modifiedAt}</td>
             </tr>`
         }
 
