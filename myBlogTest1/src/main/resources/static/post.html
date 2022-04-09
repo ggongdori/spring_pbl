@@ -60,7 +60,6 @@
                     let username = response.username
                     let contents = response.contents
                     let comments = response.comments
-                    let modifiedAt = response.modifiedAt;
 
                     let tempHtml = `<div class="card col-8">
                                 <div class="container mt-5">
@@ -75,10 +74,6 @@
                                     <div class="row align-items-center my-1">
                                         <div class="col-2 text-center"><h5>내용</h5></div>
                                         <div class="col-10 text-left"><h5>${contents}</h5></div>
-                                    </div>
-                                    <div class="row align-items-center my-1">
-                                        <div class="col-2 text-center"><h5>작성시간</h5></div>
-                                        <div class="col-10 text-left"><h5>${modifiedAt}</h5></div>
                                     </div>
                                 </div>
                             </div>`
