@@ -1,14 +1,13 @@
 package com.sparta.myblogtest1.domain;
 
+import com.sparta.myblogtest1.domain.dtos.BoardRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
-@Setter
 @NoArgsConstructor
 @Entity // jpa사용 시
 public class Board extends Timestamped{

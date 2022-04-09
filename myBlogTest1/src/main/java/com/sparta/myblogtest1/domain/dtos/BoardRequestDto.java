@@ -1,4 +1,4 @@
-package com.sparta.myblogtest1.domain;
+package com.sparta.myblogtest1.domain.dtos;
 
 import lombok.Getter;
 import org.apache.tomcat.jni.Local;

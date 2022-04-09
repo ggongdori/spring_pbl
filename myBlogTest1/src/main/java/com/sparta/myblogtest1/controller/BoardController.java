@@ -1,8 +1,8 @@
 package com.sparta.myblogtest1.controller;
 
 import com.sparta.myblogtest1.domain.Board;
-import com.sparta.myblogtest1.domain.BoardRepository;
-import com.sparta.myblogtest1.domain.BoardRequestDto;
+import com.sparta.myblogtest1.domain.repository.BoardRepository;
+import com.sparta.myblogtest1.domain.dtos.BoardRequestDto;
 import com.sparta.myblogtest1.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
