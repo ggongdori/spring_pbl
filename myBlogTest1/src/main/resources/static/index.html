@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>게시글 작성 페이지</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            getBoards();
+        })
+
+        function boardHtml(id, name, title, contents, createdDate) {
+            console.log(name, title, contents, createdDate);
+            let curBoard = `<div class="card-body"><a id="detailId" data-toggle="modal" data-target="#detailModal${id}" href="javascript:void(0)">${title} ${name} ${createdDate}</a></div>
+<div class="modal fade" id="detailModal${id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">상세페이지</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>제목 : </label>
+                    ${title}
+                </div>
+                <div class="form-group">
+                    <label>이름 : </label>
+                    ${name}
+                </div>
+                <div class="form-group">
+                    <label>작성날짜 : </label>
+                    ${createdDate}
+                </div>
+                <div class="form-group">
+                    <label>내용 : </label>
+                    ${contents}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
+            $('#board-box').append(curBoard);
+        }
+
+        function writeBoard() {
+            let name = $('#name').val();
+            let title = $('#title').val();
+            let contents = $('#contents').val();
+            let data = {'name': name, 'title': title, 'contents': contents};
+            $.ajax({
+                type: "POST",
+                url: "myblog/boards",
+                contentType: "application/json",
+                data: JSON.stringify(data),
+                success: function (response) {
+                    alert('게시글이 성공적으로 작성되었습니다.');
+                    window.location.reload();
+                }
+            });
+        }
+
+        function getBoards() {
+            $('#board-box').empty();
+            $.ajax({
+                type: "GET",
+                url: "myblog/boards",
+                data: {},
+                success: function (response) {
+                    for (let i = 0; i < response.length; ++i) {
+                        let board = response[i];
+                        let id = board['id'];
+                        let name = board['name'];
+                        let title = board['title'];
+                        let contents = board['contents'];
+                        let createdDate = board['createdAt'];
+                        boardHtml(id, name, title, contents, createdDate);
+                    }
+                }
+            })
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('https://post-phinf.pstatic.net/MjAyMDEyMzBfMTA4/MDAxNjA5MjU4ODMwNzA4.5KZ42DOICauQGEp2irhmUS4YQKXbMTgOcUCrECOHVWYg.rVn33oeWhQ98E_soCaQwr2NUIkycypOkZoGYeZaSxJAg.JPEG/joe-woods-4Zaq5xY5M_c-unsplash.jpg?type=w1200');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .btn-primary {
+            margin: auto;
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .card {
+            margin: auto;
+            width: 40%;
+        }
+    </style>
+
+</head>
+<body>
+<!-- 모달을 열기 위한 버튼 -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">게시글 작성하기</button>
+<!-- 모달 영역 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">게시글 작성하기</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">게시글 수정하기</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="email" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label>이름</label>
+                    <input type="email" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label>내용</label>
+                    <textarea class="form-control" id="contents" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="writeBoard()" class="btn btn-primary">확인</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" id="board-box">
+</div>
+</body>
+</html>
