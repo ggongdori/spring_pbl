@@ -1,4 +1,4 @@
-package com.sparta.myblogtest1.domain;
+package com.sparta.myblogtest1.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
