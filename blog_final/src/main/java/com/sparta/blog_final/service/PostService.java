@@ -1,8 +1,8 @@
 package com.sparta.blog_final.service;
 
-import com.sparta.myblogtest1.models.Post;
-import com.sparta.myblogtest1.models.PostRepository;
-import com.sparta.myblogtest1.models.PostRequestDto;
+import com.sparta.blog_final.models.Post;
+import com.sparta.blog_final.models.PostRepository;
+import com.sparta.blog_final.models.PostRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

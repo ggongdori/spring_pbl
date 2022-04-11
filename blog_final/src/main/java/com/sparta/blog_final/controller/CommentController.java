@@ -1,11 +1,11 @@
 package com.sparta.blog_final.controller;
 
 
-import com.sparta.myblogtest1.models.Comment;
-import com.sparta.myblogtest1.models.CommentRepository;
-import com.sparta.myblogtest1.models.CommentRequestDto;
-import com.sparta.myblogtest1.models.Success;
-import com.sparta.myblogtest1.service.CommentService;
+import com.sparta.blog_final.models.Comment;
+import com.sparta.blog_final.models.CommentRepository;
+import com.sparta.blog_final.models.CommentRequestDto;
+import com.sparta.blog_final.models.Success;
+import com.sparta.blog_final.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

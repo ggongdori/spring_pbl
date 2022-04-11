@@ -1,7 +1,7 @@
 package com.sparta.blog_final.service;
 
 
-import com.sparta.myblogtest1.models.*;
+import com.sparta.blog_final.models.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

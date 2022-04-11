@@ -1,10 +1,9 @@
 package com.sparta.blog_final.controller;
 
-
-import com.sparta.myblogtest1.models.Post;
-import com.sparta.myblogtest1.models.PostRepository;
-import com.sparta.myblogtest1.models.PostRequestDto;
-import com.sparta.myblogtest1.service.PostService;
+import com.sparta.blog_final.models.Post;
+import com.sparta.blog_final.models.PostRepository;
+import com.sparta.blog_final.models.PostRequestDto;
+import com.sparta.blog_final.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
