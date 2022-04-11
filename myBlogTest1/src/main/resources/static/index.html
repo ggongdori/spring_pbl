@@ -61,7 +61,6 @@
                 success: function (response) {
                     $('#body-container').empty()
                     for (let i = 0; i < response.length; i++) {
-                        print(response.length)
                         let post = response[i]
                         let tempHtml = addPostItem(post)
                         $('#body-container').append(tempHtml)
@@ -74,7 +73,6 @@
             return `<tr onclick=openPost(${post.id})>
                 <td class="text-center">${post.title}</td>
                 <td class="text-center">${post.username}</td>
-                <td class="text-center">${post.modifiedAt}</td>
             </tr>`
         }
 
@@ -101,9 +99,9 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th class="col-6 text-center" scope="col">제목</th>
+            <th class="col-9 text-center" scope="col">제목</th>
             <th class="col-3 text-center" scope="col">작성자</th>
-            <th class="col-3 text-center" scope="col">작성시간</th>
+            <!--            <th class="col-2 text-center" scope="col">작성시간</th>-->
         </tr>
         </thead>
         <tbody id="body-container">

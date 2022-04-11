@@ -48,7 +48,6 @@
           let title = response.title
           let username = response.username
           let contents = response.contents
-          let modifiedAt = response.modifiedAt;
           $('input[name=title]').attr('value', title);
           $('input[name=username]').attr('value', username);
           $('#contents').append(contents);
@@ -62,7 +61,6 @@
       title = $('#title').val()
       username = $('#username').val()
       contents = $('#contents').val()
-      modifiedAt = $('#modifiedAt').val();
 
       if (title === '' || username === '' || contents === '') {
         alert("모든 항목을 작성해주세요")
@@ -75,7 +73,7 @@
           type: "PUT",
           url: `/api/posts/${getId}`,
           contentType: "application/json",
-          data: JSON.stringify({title, username, contents,modifiedAt}),
+          data: JSON.stringify({title, username, contents}),
           success: function (response) {
             alert("수정되었습니다.")
             window.location.href = "/"
@@ -86,7 +84,7 @@
           type: "POST",
           url: '/api/posts',
           contentType: "application/json",
-          data: JSON.stringify({title, username, contents, modifiedAt}),
+          data: JSON.stringify({title, username, contents}),
           success: function (response) {
             alert("저장되었습니다.")
             window.location.href = "/"
