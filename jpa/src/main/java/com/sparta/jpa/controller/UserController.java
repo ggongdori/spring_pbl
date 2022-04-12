@@ -1,6 +1,7 @@
 package com.sparta.jpa.controller;
 
 import com.sparta.jpa.model.User;
+import com.sparta.jpa.repository.UserRepository;
 import com.sparta.jpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
