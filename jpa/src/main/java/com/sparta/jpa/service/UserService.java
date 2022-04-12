@@ -1,11 +1,9 @@
 package com.sparta.jpa.service;
 
 import com.sparta.jpa.model.User;
-import com.sparta.jpa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
 public class UserService {
