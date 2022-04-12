@@ -17,7 +17,6 @@ public class PageController {
     }
 
     @RequestMapping(value = "/create")
-    public String create() {
-        return "create";
+    public String create() {return "create";
     }
 }

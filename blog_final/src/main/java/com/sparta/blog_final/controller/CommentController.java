@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class CommentController {
+public class  CommentController {
     private final CommentRepository commentRepository;
     private final CommentService commentService;
 
