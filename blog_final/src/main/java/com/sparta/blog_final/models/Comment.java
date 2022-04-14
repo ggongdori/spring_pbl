@@ -15,6 +15,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Comment extends Timestamped {
 
+    //PK 선언
+    //Identity = 키값 생성을 DB에 위임하고 Auto_increment, 이거에 대해서 추가로 알아보기
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,11 +27,15 @@ public class Comment extends Timestamped {
     @Column(nullable = false)
     private String contents;
 
+    //순환참조 방지 (JsonBackReference)
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "POST_ID")
+    @JoinColumn(name = "POST_ID") //코멘트와 포스트 연결(테이블의 "POST_ID")
     private Post post;
 
+
+    //Builder vs Constructor, 빌더는 어느 필드에 어떤 값을 넣어야 하는지 확인 가능
+    //추가 개념 확인 필요!!!!!!!!!!!
     @Builder
     public Comment(String contents, String username) {
         this.contents = contents;

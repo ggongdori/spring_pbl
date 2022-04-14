@@ -15,6 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class Post extends Timestamped {
 
+
+    //PK 선언
+    //Identity = 키값 생성을 DB에 위임하고 Auto_increment, 이거에 대해서 추가로 알아보기
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "POST_ID")
@@ -30,7 +33,8 @@ public class Post extends Timestamped {
     private String contents;
 
 
-
+    //순환참조 방지, Post 클래스에 JsonManagedReference
+    //Comment 클래스에 JsonBackReference
     @JsonManagedReference
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     private List<Comment> comments = new ArrayList<>();
