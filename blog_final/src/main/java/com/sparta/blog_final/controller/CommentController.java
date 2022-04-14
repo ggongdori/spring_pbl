@@ -23,7 +23,7 @@ public class  CommentController {
     //코멘트 리스트 가져오기
     @GetMapping("api/comments")
     public List<Comment> getComments() {
-        return commentRepository.findAllByOrderByCreatedAtDesc();
+        return commentRepository.findAllByOrderByModifiedAtDesc();
     }
 
     //Success == True, Comment 등록

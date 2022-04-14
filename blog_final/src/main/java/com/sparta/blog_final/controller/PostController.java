@@ -20,7 +20,7 @@ public class PostController {
     //등록된 글 리스트 가져오기
     @GetMapping("/api/posts")
     public List<Post> getPosts() {
-        return postRepository.findAllByOrderByCreatedAtDesc();
+        return postRepository.findAllByOrderByModifiedAtDesc();
     }
 
     //글 등록하기
