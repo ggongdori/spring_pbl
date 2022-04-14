@@ -15,6 +15,7 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final PostRepository postRepository;
 
+    //Transactional에 대해서는 아주 많이 더 공부할 것
     @Transactional
     public void addComment(Long post_id, CommentRequestDto requestDto) {
         Optional<Post> result = Optional.ofNullable(postRepository.findById(post_id).orElseThrow(NullPointerException::new));
