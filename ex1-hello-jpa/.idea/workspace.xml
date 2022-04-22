@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/advice/ControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/advice/RestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Like.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/RefreshToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/CommentRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LikeRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LoginRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LoginResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostListResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostUpdateRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/RegisterRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/TokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/TokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/JwtTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/PrincipalDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/PrincipalDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/LikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../h2-setup-2022-04-09.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/01. JPA 소개.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/02. JPA 시작.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/03. 영속성관리.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/04. 엔티티 매핑.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/05. 연관관계 매핑 기초.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/06. 다양한 연관관계 매핑.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/07. 고급 매핑.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/08. 프록시와 연관관계 관리.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/09. 값 타입.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/10. 객체지향 쿼리 언어.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/dto/SignupRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/model/UserRoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcore/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/CommentRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/PostRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springcore/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springcore/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/resources/static/css/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="286HL3mYG0sB771Ql0DE4Yrm16C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="프로젝트" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hellojpa.JpaMain" />
+      <module name="ex1-hello-jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hellojpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.JpaMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="" />
+      <created>1650530058780</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650530058780</updated>
+      <workItem from="1650530062967" duration="3713000" />
+      <workItem from="1650535842776" duration="714000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

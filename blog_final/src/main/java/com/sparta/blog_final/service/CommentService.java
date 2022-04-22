@@ -1,7 +1,10 @@
 package com.sparta.blog_final.service;
 
 
-import com.sparta.blog_final.models.*;
+import com.sparta.blog_final.domain.Comment;
+import com.sparta.blog_final.domain.Post;
+import com.sparta.blog_final.dto.CommentRequestDto;
+import com.sparta.blog_final.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +31,7 @@ public class CommentService {
     }
 
     @Transactional
-    public Long updateComment(Long commentId,CommentRequestDto requestDto){
+    public Long updateComment(Long commentId, CommentRequestDto requestDto){
         Comment comment=commentRepository.findById(commentId).orElseThrow(
                 ()->new NullPointerException("해당 아이디가 없습니다.")
         );
