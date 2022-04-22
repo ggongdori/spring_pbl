@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="hello-jpa 시작" />
+    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="hello-jpa 시작">
+      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +72,7 @@
       <workItem from="1650530062967" duration="3713000" />
       <workItem from="1650535842776" duration="714000" />
       <workItem from="1650630807876" duration="52000" />
+      <workItem from="1650630930613" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="hello-jpa 시작">
       <created>1650630831511</created>
