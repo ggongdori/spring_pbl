@@ -4,78 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/advice/ControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/advice/RestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/LikeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Like.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/RefreshToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/CommentRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LikeRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LoginRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/LoginResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostListResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/PostUpdateRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/RegisterRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/dto/TokenResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/LikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/PrincipalDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/PrincipalDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/LikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../h2-setup-2022-04-09.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/01. JPA 소개.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/02. JPA 시작.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/03. 영속성관리.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/04. 엔티티 매핑.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/05. 연관관계 매핑 기초.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/06. 다양한 연관관계 매핑.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/07. 고급 매핑.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/08. 프록시와 연관관계 관리.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/09. 값 타입.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-basic-pdf/10. 객체지향 쿼리 언어.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/dto/SignupRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/model/UserRoleEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springcore/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/CommentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/CommentRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/models/PostRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_final/src/main/java/com/sparta/blog_final/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/java/com/sparta/springcore/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springcore/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springcore/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore/src/main/resources/static/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="hello-jpa 시작" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +69,16 @@
       <updated>1650530058780</updated>
       <workItem from="1650530062967" duration="3713000" />
       <workItem from="1650535842776" duration="714000" />
+      <workItem from="1650630807876" duration="52000" />
     </task>
+    <task id="LOCAL-00001" summary="hello-jpa 시작">
+      <created>1650630831511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650630831511</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,5 +94,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hello-jpa 시작" />
+    <option name="LAST_COMMIT_MESSAGE" value="hello-jpa 시작" />
   </component>
 </project>
