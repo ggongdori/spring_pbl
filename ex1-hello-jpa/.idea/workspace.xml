@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="hello-jpa 시작">
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="Member class added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +70,7 @@
       <workItem from="1650530062967" duration="3713000" />
       <workItem from="1650535842776" duration="714000" />
       <workItem from="1650630807876" duration="52000" />
-      <workItem from="1650630930613" duration="18000" />
+      <workItem from="1650630930613" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="hello-jpa 시작">
       <created>1650630831511</created>
@@ -81,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650630831511</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hello-jpa main modified">
+      <created>1650630961511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650630961511</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Member class added">
+      <created>1650631008265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650631008265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +112,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hello-jpa 시작" />
-    <option name="LAST_COMMIT_MESSAGE" value="hello-jpa 시작" />
+    <MESSAGE value="hello-jpa main modified" />
+    <MESSAGE value="Member class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Member class added" />
   </component>
 </project>
