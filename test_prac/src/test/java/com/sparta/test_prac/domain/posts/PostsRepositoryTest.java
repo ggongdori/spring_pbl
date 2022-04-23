@@ -18,7 +18,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @After
+    @After //JUnit unittest 끝날때마다 수행
     public void cleanup() {
         postsRepository.deleteAll();
     }
@@ -28,7 +28,7 @@ public class PostsRepositoryTest {
         //given
         String title = "test";
         String content = "test1111111";
-
+        // insert, update queries
         postsRepository.save(Posts.builder().
                 title(title)
                 .content(content)
@@ -41,7 +41,6 @@ public class PostsRepositoryTest {
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
-
 
     }
 }
