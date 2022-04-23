@@ -23,6 +23,7 @@ public class Posts {
 
     private String author;
 
+    //생성자 대신 빌더 추가, 넣어야 될 값을 명확히 알 수 있음
     @Builder
     public Posts(String title, String content, String author) {
         this.title = title;
