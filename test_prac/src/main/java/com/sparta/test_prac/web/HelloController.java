@@ -13,6 +13,7 @@ public class HelloController {
         return "hello";
     }
 
+    //@RequestParam: 외부에서 넘긴 파라미터를 가져옴
     @GetMapping("/hello/dto")
     public HelloResponseDto helloDto(@RequestParam("name") String name,
                                      @RequestParam("amount") int amount) {
