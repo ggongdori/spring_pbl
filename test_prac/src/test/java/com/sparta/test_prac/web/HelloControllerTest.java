@@ -1,4 +1,4 @@
-package com.sparta.test_prac;
+package com.sparta.test_prac.web;
 
 import com.sparta.test_prac.web.HelloController;
 import org.junit.Test;
