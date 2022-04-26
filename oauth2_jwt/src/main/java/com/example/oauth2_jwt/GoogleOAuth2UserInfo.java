@@ -2,22 +2,29 @@ package com.example.oauth2_jwt;
 
 import java.util.Map;
 
-public abstract class OAuth2UserInfo {
-    protected Map<String, Object> attributes;
+public class GoogleOAuth2UserInfo extends OAuth2UserInfo {
 
-    public OAuth2UserInfo(Map<String, Object> attributes) {
-        this.attributes = attributes;
+    public GoogleOAuth2UserInfo(Map<String, Object> attributes) {
+        super(attributes);
     }
 
-    public Map<String, Object> getAttributes() {
-        return attributes;
+    @Override
+    public String getId() {
+        return (String) attributes.get("sub");
     }
 
-    public abstract String getId();
+    @Override
+    public String getName() {
+        return (String) attributes.get("name");
+    }
 
-    public abstract String getName();
+    @Override
+    public String getEmail() {
+        return (String) attributes.get("email");
+    }
 
-    public abstract String getEmail();
-
-    public abstract String getImageUrl();
+    @Override
+    public String getImageUrl() {
+        return (String) attributes.get("picture");
+    }
 }

@@ -1,33 +1,40 @@
 package com.example.oauth2_jwt;
 
-@Component
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+
+import java.security.Key;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.stream.Collectors;
+
+@Slf4j
 public class AuthTokenProvider {
 
-    @Value("${app.auth.tokenExpiry}")
-    private String expiry; // 토큰 만료일
-
     private final Key key;
-    private static final String AUTHORITIES_KEY = "role"; // getAuthentication에서 사용자 권한 체크 위함
+    private static final String AUTHORITIES_KEY = "role";
 
-    public AuthTokenProvider(@Value("${app.auth.tokenSecret}") String secretKey) { // 생성자
-        this.key = Keys.hmacShaKeyFor(secretKey.getBytes());
+    public AuthTokenProvider(String secret) {
+        this.key = Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    public AuthToken createToken(String id, RoleType roleType, String expiry) { // 추후 roleType 추가 시 interface 역할 하기 위해 생성
-        Date expiryDate = getExpiryDate(expiry);
-        return new AuthToken(id, roleType, expiryDate, key);
+    public AuthToken createAuthToken(String id, Date expiry) {
+        return new AuthToken(id, expiry, key);
     }
 
-    public AuthToken createUserAppToken(String id) { // USER에 대한 AccessToken(AppToken) 생성
-        return createToken(id, RoleType.USER, expiry);
+    public AuthToken createAuthToken(String id, String role, Date expiry) {
+        return new AuthToken(id, role, expiry, key);
     }
 
-    public AuthToken convertAuthToken(String token) { // String to AuthToken
+    public AuthToken convertAuthToken(String token) {
         return new AuthToken(token, key);
-    }
-
-    public static Date getExpiryDate(String expiry) { // String to Date
-        return new Date(System.currentTimeMillis() + Long.parseLong(expiry));
     }
 
     public Authentication getAuthentication(AuthToken authToken) {
@@ -40,8 +47,9 @@ public class AuthTokenProvider {
                             .map(SimpleGrantedAuthority::new)
                             .collect(Collectors.toList());
 
+            log.debug("claims subject := [{}]", claims.getSubject());
             User principal = new User(claims.getSubject(), "", authorities);
-            // 사실상 principal에 저장되는 값은 socialId값과 role뿐(소셜 로그인만 사용하여 password 저장하지 않아 ""로 넣음)
+
             return new UsernamePasswordAuthenticationToken(principal, authToken, authorities);
         } else {
             throw new TokenValidFailedException();
