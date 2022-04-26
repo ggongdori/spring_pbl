@@ -1,5 +1,10 @@
 package com.example.oauth2_jwt;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.oauth2.jose.jws.SignatureAlgorithm;
+
 @Slf4j
 @RequiredArgsConstructor
 public class AuthToken {
