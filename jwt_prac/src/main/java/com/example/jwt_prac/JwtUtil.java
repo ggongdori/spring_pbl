@@ -44,8 +44,6 @@ public class JwtUtil {
                 .compact();
     }
 
-
-
     public String createRefreshToken(String userPk, String role) {
         Claims claims = Jwts.claims().setSubject(userPk);//JWT payload에 저장
         claims.put("role", role); //정보는 키/밸류 쌍으로
