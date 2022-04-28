@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="Member class added">
+    <list default="true" id="73c7ed51-ccee-473a-92f0-9475326cb1c0" name="변경" comment="member">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     <property name="project.structure.last.edited" value="프로젝트" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.testRunning" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager">
     <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -83,7 +84,8 @@
       <workItem from="1650535842776" duration="714000" />
       <workItem from="1650630807876" duration="52000" />
       <workItem from="1650630930613" duration="88000" />
-      <workItem from="1651076306987" duration="826000" />
+      <workItem from="1651076306987" duration="1064000" />
+      <workItem from="1651077389800" duration="1092000" />
     </task>
     <task id="LOCAL-00001" summary="hello-jpa 시작">
       <created>1650630831511</created>
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650631008265</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="member">
+      <created>1651077162652</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651077162652</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +136,7 @@
     <MESSAGE value="hello-jpa 시작" />
     <MESSAGE value="hello-jpa main modified" />
     <MESSAGE value="Member class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Member class added" />
+    <MESSAGE value="member" />
+    <option name="LAST_COMMIT_MESSAGE" value="member" />
   </component>
 </project>
