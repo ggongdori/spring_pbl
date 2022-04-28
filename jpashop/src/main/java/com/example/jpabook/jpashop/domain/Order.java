@@ -37,5 +37,23 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status; //order, cancel enumtype
 
+    //연관관계 편의 메소드
+    //컨트롤 하는 쪽에 만들어 주는 것이 좋음
+    //양방향일때 세팅하기 좋음
+    public void setMember(Member member) {
+        this.member = member;
+        member.getOrders().add(this);
+    }
+
+    public void addOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+        delivery.setOrder(this);
+
+    }
 
 }
