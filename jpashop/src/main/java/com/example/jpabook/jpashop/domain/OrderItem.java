@@ -1,7 +1,9 @@
 package com.example.jpabook.jpashop.domain;
 
 import com.example.jpabook.jpashop.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
 
     @Id
