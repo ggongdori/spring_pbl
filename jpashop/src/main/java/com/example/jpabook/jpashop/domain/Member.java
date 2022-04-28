@@ -7,7 +7,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 엔티티에서는 가급적 Setter를 쓰지말자
+ * 모든 연관관계는 무조건 LAZY!!!!!!!!!!!
+ */
 @Setter
 @Getter
 @Entity
