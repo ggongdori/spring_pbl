@@ -16,11 +16,13 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-    @ManyToOne
+    //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;
 
-    @ManyToOne
+    //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
 

@@ -25,7 +25,8 @@ public class Category {
             inverseJoinColumns = @JoinColumn(name = "item_id"))
     private List<Item> items = new ArrayList<>();
 
-    @ManyToOne
+    //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parents;
 

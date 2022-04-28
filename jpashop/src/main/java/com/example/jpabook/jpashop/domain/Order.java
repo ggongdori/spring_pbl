@@ -20,14 +20,15 @@ public class Order {
     @Column(name = "member_id")
     private Long id;
 
-    @ManyToOne
+    //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @OneToMany(mappedBy = "order") //orderItem class의 order 객체에 의해 mapping
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL) //orderItem class의 order 객체에 의해 mapping
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 

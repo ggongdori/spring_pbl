@@ -25,6 +25,9 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
+    //컬렉션은 필드에서 초기화!!!!!!!!
+    //가급적 변경xxxxxxxxxxxx
+    //hibernate 가 관리할 수 있는 객체로 감싸지기 때문에
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
 }
