@@ -20,7 +20,7 @@ public class Order {
 
     @Id
     @GeneratedValue
-    @Column(name = "member_id")
+    @Column(name = "order_id")
     private Long id;
 
     //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!

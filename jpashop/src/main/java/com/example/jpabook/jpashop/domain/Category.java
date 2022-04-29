@@ -28,7 +28,7 @@ public class Category {
     //XtoOne 연관관계는 기본이 eager, lazy로 무조건 바꿔야함!!!!!!!!
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
-    private Category parents;
+    private Category parent;
 
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Category {
     //====연관관계 편의 메소드
     public void addChildCategory(Category child) {
         this.child.add(child);
-        child.setParents(this);
+        child.setParent(this);
     }
 
 }
