@@ -31,7 +31,6 @@ public class MemberController {
         Member member = new Member();
         member.setName(memberForm.getName());
         member.setAddress(address);
-
         memberService.join(member);
         return "redirect:/";
     }
