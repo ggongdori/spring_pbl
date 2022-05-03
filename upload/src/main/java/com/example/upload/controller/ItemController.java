@@ -27,6 +27,7 @@ import java.util.List;
 public class ItemController {
     private final ItemRepository itemRepository;
     private final FileStore fileStore;
+
     @GetMapping("/items/new")
     public String newItem(@ModelAttribute ItemForm form) {
         return "item-form";
@@ -52,6 +53,7 @@ public class ItemController {
         model.addAttribute("item", item);
         return "item-view";
     }
+    //이미지 다운로드
     @ResponseBody
     @GetMapping("/images/{filename}")
     public Resource downloadImage(@PathVariable String filename) throws

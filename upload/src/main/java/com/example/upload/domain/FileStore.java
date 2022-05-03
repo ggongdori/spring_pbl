@@ -37,12 +37,15 @@ public class FileStore {
         multipartFile.transferTo(new File(getFullPath(storeFileName)));
         return new UploadFile(originalFilename, storeFileName);
     }
+
+    //db에 저장할 filename UUID + ext
     private String createStoreFileName(String originalFilename) {
         String ext = extractExt(originalFilename);
         String uuid = UUID.randomUUID().toString();
         return uuid + "." + ext;
     }
-    private String extractExt(String originalFilename) {
+    // "." 기준으로 ext 뽑기기
+   private String extractExt(String originalFilename) {
         int pos = originalFilename.lastIndexOf(".");
         return originalFilename.substring(pos + 1);
     }
