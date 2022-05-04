@@ -18,7 +18,7 @@ public class Board extends Timestamped {
     private Long id;
 
     private String contents;
-    private List<String> images = new ArrayList<>();
+//    private List<String> images = new ArrayList<>();
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "user_id")
 //    private User user;
