@@ -8,7 +8,8 @@ import java.util.List;
 @Data
 public class ItemForm {
     private Long itemId;
-    private String itemName;
+    private String title;
+    private String contents;
     private List<MultipartFile> imageFiles;
     private MultipartFile attachFile;
 }

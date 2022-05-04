@@ -40,7 +40,7 @@ public class ItemController {
                 fileStore.storeFiles(form.getImageFiles());
 //데이터베이스에 저장
         Item item = new Item();
-        item.setItemName(form.getItemName());
+        item.setTitle(form.getTitle());
         item.setAttachFile(attachFile);
         item.setImageFiles(storeImageFiles);
         itemRepository.save(item);
