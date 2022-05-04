@@ -10,6 +10,5 @@ public class Item extends Timestamped {
     private String title;
     private String contents;
     private UploadFile attachFile;
-
     private List<UploadFile> imageFiles;
 }
