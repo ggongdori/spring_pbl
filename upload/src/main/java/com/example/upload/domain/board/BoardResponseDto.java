@@ -27,7 +27,6 @@ public class BoardResponseDto {
         this.nickname = board.getNickname();
         this.title = board.getTitle();
         this.contents = board.getContents();
-
         this.images = board.getImages();
         this.lastModifiedAt = board.getLastModifiedAt();
     }

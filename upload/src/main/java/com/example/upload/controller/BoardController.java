@@ -7,11 +7,13 @@ import com.example.upload.domain.board.BoardResponseDto;
 import com.example.upload.domain.board.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
 @RequiredArgsConstructor
+@RequestMapping("/api")
 @RestController
 public class BoardController {
     private final BoardRepository boardRepository;
