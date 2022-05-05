@@ -33,6 +33,16 @@ public class Board extends Timestamped {
         this.contents = contents;
         this.images = images;
     }
+
+    public static Board createBoard(String title, String contents, List<MultipartFile> images) {
+        Board board = new Board(title, contents, images);
+        return board;
+    }
+    public void updateBoard(String title, String contents, List<MultipartFile> images) {
+        this.title = title;
+        this.contents = contents;
+        this.images = images;
+    }
 //    private List<String> images = new ArrayList<>();
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "user_id")
