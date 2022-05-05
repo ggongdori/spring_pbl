@@ -15,5 +15,6 @@ public class BoardRequestDto {
     private String contents;
     private String nickname;
     private List<MultipartFile> images;
+//    private boolean bookmark;
 //    private MultipartFile file;
 }

@@ -2,6 +2,7 @@ package com.example.upload.domain.board;
 
 import com.example.upload.domain.Timestamped;
 import com.example.upload.domain.comment.Comment;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,9 +14,11 @@ import java.util.List;
 
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Entity
 public class Board extends Timestamped {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "board_id")
@@ -24,17 +27,19 @@ public class Board extends Timestamped {
     private String nickname;
     private String title;
     private String contents;
-    private int viewCount;
+    //조회수
+    @Column(columnDefinition = "integer default 0")
+    private int view;
+    
     private boolean bookmark;
     private LocalDateTime lastModifiedAt;
 
     @OneToMany
     @JoinColumn(name = "board")
-    private List<UploadFile> images = new ArrayList<>();
+    private List<UploadFile> images;
 
-    @OneToMany(mappedBy = "board")
-    @JoinColumn
-    private List<Comment> comments = new ArrayList<>();
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
+    private List<Comment> comments;
 
     //    private Board(String contents, List<UploadFile> images) {
 //        this.contents = contents;

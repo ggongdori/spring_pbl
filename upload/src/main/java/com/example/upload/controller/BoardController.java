@@ -6,9 +6,8 @@ import com.example.upload.domain.board.BoardRequestDto;
 import com.example.upload.domain.board.BoardResponseDto;
 import com.example.upload.domain.board.BoardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -24,4 +23,13 @@ public class BoardController {
     public BoardResponseDto saveBoard(BoardRequestDto requestDto) throws IOException {
         return boardService.saveBoard(requestDto);
     }
+
+//    @GetMapping("/posts/read/{id}")
+//    public String read(@PathVariable Long id, Model model) {
+//        BoardResponseDto dto = boardService.findById(id);
+//        boardService.updateView(id); // views ++
+//        model.addAttribute("posts", dto);
+//        return "posts-read";
+//    }
+
 }

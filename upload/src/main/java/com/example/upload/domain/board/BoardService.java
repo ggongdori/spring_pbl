@@ -35,4 +35,12 @@ public class BoardService {
         return new BoardResponseDto(board);
     }
 
+    //조회수
+    @Transactional
+    public int updateView(Long id) {
+        return boardRepository.updateView(id);
+    }
+
+
+
 }

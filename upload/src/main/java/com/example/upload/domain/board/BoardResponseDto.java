@@ -1,13 +1,10 @@
 package com.example.upload.domain.board;
 
-import com.example.upload.domain.board.Board;
+import com.example.upload.domain.comment.CommentResponseDto;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -19,6 +16,9 @@ public class BoardResponseDto {
     private String nickname;
     private String title;
     private String contents;
+    private boolean bookmark;
+    private int view;
+    private List<CommentResponseDto> comment;
     private List<UploadFile> images;
     private LocalDateTime lastModifiedAt;
 
@@ -27,6 +27,8 @@ public class BoardResponseDto {
         this.nickname = board.getNickname();
         this.title = board.getTitle();
         this.contents = board.getContents();
+        this.view = board.getView();
+        this.bookmark = isBookmark();
         this.images = board.getImages();
         this.lastModifiedAt = board.getLastModifiedAt();
     }

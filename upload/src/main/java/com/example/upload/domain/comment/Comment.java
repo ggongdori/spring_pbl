@@ -33,11 +33,13 @@ public class Comment extends Timestamped {
     @LastModifiedDate
     private String modifiedDate;
 
-
     @ManyToOne
     @JoinColumn(name = "board_id")
     private Board board;
 
+    public void updateComment(String contents) {
+        this.contents = contents;
+    }
 //    public static Comment saveComment(Board board) {
 //        Comment comment = new Comment(board);
 //        comment.getBoard().getComments().add(comment);
