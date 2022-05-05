@@ -19,7 +19,7 @@ public class BoardResponseDto {
     private String nickname;
     private String title;
     private String contents;
-//    private List<MultipartFile> images;
+    private List<UploadFile> images;
     private LocalDateTime lastModifiedAt;
 
     public BoardResponseDto(Board board) {
@@ -27,6 +27,8 @@ public class BoardResponseDto {
         this.nickname = board.getNickname();
         this.title = board.getTitle();
         this.contents = board.getContents();
-//        this.lastModifiedAt = board.getLastModifiedAt();
+
+        this.images = board.getImages();
+        this.lastModifiedAt = board.getLastModifiedAt();
     }
 }
