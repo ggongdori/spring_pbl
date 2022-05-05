@@ -1,5 +1,6 @@
 package com.example.upload.domain;
 
+import com.example.upload.domain.board.UploadFile;
 import lombok.Data;
 
 import java.util.List;

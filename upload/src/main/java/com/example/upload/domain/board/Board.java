@@ -1,10 +1,8 @@
 package com.example.upload.domain.board;
 
 import com.example.upload.domain.Timestamped;
-import com.example.upload.domain.comment.Comment;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,34 +17,14 @@ public class Board extends Timestamped {
     @Column(name = "board_id")
     private Long id;
 
+    private String nickname;
     private String title;
     private String contents;
-    private List<MultipartFile> images = new ArrayList<>();
 
-//    @OneToMany
-//    private boolean bookmark;
-//    @OneToMany
-//    private List<Comment> comments = new ArrayList<>();
+    @OneToMany
+    @JoinColumn(name = "board")
+    private List<UploadFile> images = new ArrayList<>();
 
-    private Board(String title, String contents, List<MultipartFile> images) {
-        this.title = title;
-        this.contents = contents;
-        this.images = images;
-    }
-
-    public static Board createBoard(String title, String contents, List<MultipartFile> images) {
-        Board board = new Board(title, contents, images);
-        return board;
-    }
-    public void updateBoard(String title, String contents, List<MultipartFile> images) {
-        this.title = title;
-        this.contents = contents;
-        this.images = images;
-    }
-//    private List<String> images = new ArrayList<>();
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "user_id")
-//    private User user;
 
 
 }

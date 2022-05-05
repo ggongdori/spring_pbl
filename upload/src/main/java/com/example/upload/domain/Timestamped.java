@@ -8,11 +8,9 @@ import java.time.LocalDateTime;
 
 public class Timestamped {
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     @CreatedDate
     private LocalDateTime createdAt;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     @LastModifiedDate
-    private LocalDateTime modifiedAt;
+    private LocalDateTime lastModifiedAt;
 }

@@ -1,4 +1,4 @@
-package com.example.upload.domain.comment;
-
-public class CommentDto {
-}
+//package com.example.upload.domain.comment;
+//
+//public class CommentDto {
+//}

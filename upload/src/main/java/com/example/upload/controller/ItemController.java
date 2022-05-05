@@ -3,7 +3,7 @@ package com.example.upload.controller;
 import com.example.upload.domain.FileStore;
 import com.example.upload.domain.Item;
 import com.example.upload.domain.ItemRepository;
-import com.example.upload.domain.UploadFile;
+import com.example.upload.domain.board.UploadFile;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
@@ -32,6 +32,7 @@ public class ItemController {
     public String newItem(@ModelAttribute ItemForm form) {
         return "item-form";
     }
+
     @PostMapping("/items/new")
     public String saveItem(@ModelAttribute ItemForm form, RedirectAttributes
             redirectAttributes) throws IOException {
@@ -41,6 +42,7 @@ public class ItemController {
 //데이터베이스에 저장
         Item item = new Item();
         item.setTitle(form.getTitle());
+        item.setContents(form.getContents());
         item.setAttachFile(attachFile);
         item.setImageFiles(storeImageFiles);
         itemRepository.save(item);

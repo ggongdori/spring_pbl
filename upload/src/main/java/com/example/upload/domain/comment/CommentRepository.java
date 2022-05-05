@@ -1,6 +1,6 @@
-package com.example.upload.domain.comment;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface CommentRepository extends JpaRepository<Comment, Long> {
-}
+//package com.example.upload.domain.comment;
+//
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//public interface CommentRepository extends JpaRepository<Comment, Long> {
+//}
