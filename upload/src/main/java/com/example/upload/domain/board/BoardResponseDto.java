@@ -2,17 +2,18 @@ package com.example.upload.domain.board;
 
 import com.example.upload.domain.comment.CommentResponseDto;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class BoardResponseDto {
-    private Long id;
+    private Long boardId;
     private String nickname;
     private String title;
     private String contents;
@@ -23,7 +24,7 @@ public class BoardResponseDto {
     private LocalDateTime lastModifiedAt;
 
     public BoardResponseDto(Board board) {
-        this.id = board.getId();
+        this.boardId = board.getId();
         this.nickname = board.getNickname();
         this.title = board.getTitle();
         this.contents = board.getContents();

@@ -20,7 +20,7 @@ import java.util.List;
 public class Board extends Timestamped {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     @Column(name = "board_id")
     private Long id;
 
@@ -41,19 +41,26 @@ public class Board extends Timestamped {
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
     private List<Comment> comments;
 
-    //    private Board(String contents, List<UploadFile> images) {
-//        this.contents = contents;
-//        this.images = images;
-//    }
-//
-//    public static Board saveBoard(String contents, List<UploadFile> images) {
-//        Board board = new Board(contents, images);
-//        return board;
-//    }
+    private Board(String contents, List<UploadFile> images) {
+        this.contents = contents;
+        this.images = images;
+    }
+
+    public static Board saveBoard(String contents, List<UploadFile> images) {
+        Board board = new Board(contents, images);
+        return board;
+    }
     private void updateBoard(String title, String contents, List<UploadFile> images) {
         this.title = title;
         this.contents = contents;
         this.images = images;
+    }
+
+    public void addBookmark(){
+        this.bookmark = true;
+    }
+    public void cancelBookmark() {
+        this.bookmark = false;
     }
 
 

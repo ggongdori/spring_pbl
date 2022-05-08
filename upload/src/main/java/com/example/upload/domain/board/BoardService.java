@@ -25,13 +25,7 @@ public class BoardService {
     public BoardResponseDto saveBoard(BoardRequestDto requestDto) throws IOException {
 //        UploadFile uploadFile = fileStore.storeFile(requestDto.getFile());
         List<UploadFile> uploadFiles = fileStore.storeFiles(requestDto.getImages());
-        Board board = new Board();
-        board.setContents(requestDto.getContents());
-        board.setNickname(requestDto.getNickname());
-        board.setTitle(requestDto.getTitle());
-        board.setImages(uploadFiles);
-        board.setLastModifiedAt(LocalDateTime.now());
-
+        Board board = boardRepository.save(Board.saveBoard(requestDto.getContents(), uploadFiles));
         return new BoardResponseDto(board);
     }
 
