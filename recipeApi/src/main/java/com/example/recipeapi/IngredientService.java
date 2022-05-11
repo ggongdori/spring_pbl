@@ -29,7 +29,6 @@ public class IngredientService {
         ingredientRepository.delete(test);
     }
 
-
     //재료에 대한 키워드를 받아 관련된 음식 찾아주기
     public List<String> findmenu(String keyword) {
         String query = keyword;
