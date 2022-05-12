@@ -1,5 +1,7 @@
-package com.example.springoauth;
+package com.example.springoauth.jwt;
 
+import com.example.springoauth.service.TokenService;
+import com.example.springoauth.domain.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

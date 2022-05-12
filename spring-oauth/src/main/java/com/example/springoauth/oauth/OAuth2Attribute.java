@@ -1,4 +1,4 @@
-package com.example.springoauth;
+package com.example.springoauth.oauth;
 
 
 import lombok.AccessLevel;

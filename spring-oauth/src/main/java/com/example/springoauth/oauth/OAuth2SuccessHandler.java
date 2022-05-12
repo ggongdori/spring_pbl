@@ -1,5 +1,9 @@
-package com.example.springoauth;
+package com.example.springoauth.oauth;
 
+import com.example.springoauth.domain.dto.Token;
+import com.example.springoauth.service.TokenService;
+import com.example.springoauth.domain.dto.UserDto;
+import com.example.springoauth.domain.dto.UserRequestMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

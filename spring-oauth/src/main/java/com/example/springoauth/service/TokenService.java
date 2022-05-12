@@ -1,6 +1,7 @@
-package com.example.springoauth;
+package com.example.springoauth.service;
 
 
+import com.example.springoauth.domain.dto.Token;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;

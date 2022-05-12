@@ -1,5 +1,9 @@
-package com.example.springoauth;
+package com.example.springoauth.config;
 
+import com.example.springoauth.oauth.CustomOAuth2UserService;
+import com.example.springoauth.jwt.JwtAuthFilter;
+import com.example.springoauth.oauth.OAuth2SuccessHandler;
+import com.example.springoauth.service.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -27,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/h2-console/**").permitAll()
+                .antMatchers("/h2-console/**", "/oauth2/**", "/token/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login()

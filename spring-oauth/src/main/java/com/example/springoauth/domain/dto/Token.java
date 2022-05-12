@@ -1,4 +1,4 @@
-package com.example.springoauth;
+package com.example.springoauth.domain.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

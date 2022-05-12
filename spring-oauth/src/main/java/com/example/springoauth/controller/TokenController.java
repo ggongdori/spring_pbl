@@ -1,5 +1,7 @@
-package com.example.springoauth;
+package com.example.springoauth.controller;
 
+import com.example.springoauth.domain.dto.Token;
+import com.example.springoauth.service.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
