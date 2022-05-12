@@ -14,7 +14,4 @@ public class UserRequestMapper {
                 .build();
     }
 
-    public UserFindRequest toFindDto(UserDto userDto) {
-        return new UserFindRequest(userDto.getEmail());
-    }
 }
