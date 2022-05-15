@@ -14,4 +14,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     @Query(value = "SELECT * FROM post WHERE tag LIKE :tag OR tag LIKE CONCAT('%,',:tag,',%') OR tag LIKE CONCAT('%,',:tag) " + "OR tag LIKE CONCAT(:tag,',%') ORDER BY id DESC", nativeQuery = true)
     Page<Post> searchResult(String tag, Pageable pageable);
+
+    List<Post> findAllByOrderByModifiedAtDesc();
 }

@@ -102,6 +102,7 @@ public class UserService {
 
 // 회원의 nickname 변경
         savedUser1.setNickname("남준이");
+
 // 회원의 favoriteFood 변경
         savedUser1.setFavoriteFood("육회");
 

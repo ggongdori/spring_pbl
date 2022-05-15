@@ -4,7 +4,6 @@ import com.sparta.blog_final.dto.CommentRequestDto;
 import com.sparta.blog_final.models.Success;
 import com.sparta.blog_final.repository.LikeRepository;
 import com.sparta.blog_final.security.PrincipalDetails;
-import com.sparta.blog_final.service.CommentService;
 import com.sparta.blog_final.service.LikeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,7 +21,7 @@ public class LikeController {
 
     @PostMapping("/post/{postId}/likes")
     public ResponseEntity<?> likes(@PathVariable long postId , @AuthenticationPrincipal PrincipalDetails principalDetails) {
-        likeservice.likes(postId, principalDetails.getUser().getId());
+        likeService.likes(postId, principalDetails.getUser().getId());
         return new ResponseEntity<>("좋아요 성공", HttpStatus.OK);
     }
 

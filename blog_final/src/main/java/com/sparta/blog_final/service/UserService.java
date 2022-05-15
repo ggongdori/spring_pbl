@@ -4,6 +4,7 @@ import com.sparta.blog_final.advice.RestException;
 import com.sparta.blog_final.domain.RefreshToken;
 import com.sparta.blog_final.domain.User;
 
+import com.sparta.blog_final.dto.LoginRequestDto;
 import com.sparta.blog_final.dto.RegisterRequestDto;
 
 import com.sparta.blog_final.dto.TokenResponseDto;
@@ -45,7 +46,7 @@ public class UserService {
 
         userRepository.save(User.builder()
                 .username(requestDto.getUsername())
-                .pw(passwordEncoder.encode(requestDto.getPw()))
+                .password(passwordEncoder.encode(requestDto.getPw()))
                 .nickname(requestDto.getNickname())
                 .build());
 
@@ -53,7 +54,7 @@ public class UserService {
 
     @Transactional
     public TokenResponseDto login(LoginRequestDto requestDto) {
-        User user = userRepository.findUserByUsername(requestDto.getUsername())
+        User user = userRepository.findByUsername(requestDto.getUsername())
                 .orElseThrow(() -> new RestException(HttpStatus.BAD_REQUEST, "가입되지 않은 username 입니다."));
         if (!passwordEncoder.matches(requestDto.getPw(), user.getPassword())) {
             throw new RestException(HttpStatus.BAD_REQUEST, "잘못된 비밀번호입니다.");

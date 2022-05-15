@@ -21,7 +21,6 @@ public class IngredientService {
 
     private final IngredientRepository ingredientRepository;
 
-
     @Transactional
     public void delete(IngredientDto ingredientDto) {
         Ingredient test = ingredientRepository.findByIngredient(ingredientDto.getIngredient()).orElseThrow(

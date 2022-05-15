@@ -1,0 +1,47 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            clientId: 6c59b4dda916bc7b5a99d658afc58a07
+            client-secret:
+            redirect-uri: localhost:8080/login/oauth2/code/kakao
+            authorization-grant-type: authorization_code
+            scope:
+              - email
+              - profile_image
+            client-name: Kakao
+
+          google:
+            clientId: 510126896636-njlsscvepmc3bt5tv7prta6i4o1361ei.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: localhost:8080/login/oauth2/code/google
+            scope:
+              - email
+              - profile
+        provider:
+          kakao:
+            authorization_uri: https://kauth.kakao.com/oauth/authorize
+            token_uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user_name_attribute: id
+
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+app:
+  auth:
+    tokenSecret: adfacv3fasdfv2452dfadfxs
+    tokenExpirationMsec: 864000000
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:8080/redirect
+
+logging.level:
+  org.hibernate.SQL: debug
+# org.hibernate.type: trace
+

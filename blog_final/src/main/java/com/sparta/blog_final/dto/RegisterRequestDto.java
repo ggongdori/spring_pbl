@@ -23,8 +23,8 @@ public class RegisterRequestDto {
     @Size(min = 4, max = 20, message = "비밀번호는 최소 4자 20자 이하")
     private String pw;
 
-    @NotBlank(message = "비밀번호 확인을 입력해주세요")
-    private String pwCheck;
+//    @NotBlank(message = "비밀번호 확인을 입력해주세요")
+//    private String pwCheck;
     
     @NotBlank(message = "닉네임을 입력해주세요")
     private String nickname;
@@ -36,12 +36,6 @@ public class RegisterRequestDto {
         this.nickname = nickname;
     }
 
-    public RegisterRequestDto(String username, String pw, String pwCheck, String nickname) {
-        this.username = username;
-        this.pw = pw;
-        this.pwCheck = pwCheck;
-        this.nickname = nickname;
-    }
 
     //패스워드 안에 username 있는지 확인
     public boolean usernameInPw(String username, String pw) {

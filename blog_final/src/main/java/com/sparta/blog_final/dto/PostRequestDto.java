@@ -25,7 +25,6 @@ public class PostRequestDto {
 
     public Post toEntity() {
         return Post.builder()
-                .id(id)
                 .picture(picture)
                 .content(content)
                 .user(user)
