@@ -8,6 +8,5 @@ public class Location {
 
     @Id
     private double latitude;
-
     private double longitude;
 }
